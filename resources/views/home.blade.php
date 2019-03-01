@@ -3,21 +3,19 @@
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
-        <div class="col-md-8">
+        <div class="col-sm-12 col-md-8">
             <div class="card">
-                <div class="card-header bg-primary text-white">
+                <div class="card-header bg-dark text-white">
                     <i class="fas fa-users mr-2"></i> <b>Users</b>
                 </div>
             </div>
 
-            <div class="mt-2">
-
+            <div class="mt-2" style="overflow-x: auto">
                 @if (session('status'))
                     <div class="alert alert-success" role="alert">
                         {{ session('status') }}
                     </div>
                 @endif
-
                 <table class="table bg-white">
                     <thead>
                         <tr>
@@ -41,16 +39,15 @@
                     </tbody>
                 </table>
                 {{ $users->links() }}
-
             </div>
         </div>
-        <div class="col-md-4">
-            <div>
+        <div class="col-sm-12 col-md-4">
+            {{-- <div>
                 <a target="_blank" href="/horizon" class="btn btn-block btn-warning mb-2">
                     Go to Horizon Dashboard <i class="fas fa-chart-line ml-2"></i>
 
                 </a>
-            </div>
+            </div> --}}
             <div class="card text-white bg-dark mb-3">
                 <div class="card-header">Header</div>
                 <div class="card-body">

@@ -27,4 +27,9 @@ class HomeController extends Controller
         $users = User::paginate(10);
         return view('home')->with('users', $users);
     }
+
+    public function passport()
+    {
+        return view('passport');
+    }
 }
